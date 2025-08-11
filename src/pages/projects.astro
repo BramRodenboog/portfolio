@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+import StichtingPrinsMax from "../assets/stichting_prins_max.jpg";
+import GameApi from "../assets/game-api.png";
+import Vitrix from "../assets/Vitrix.jpg";
+import Drogeham from "../assets/Drogeham.jpg";
+import Bungalowpark from "../assets/Bungalowpark.jpg";
+import ProjectItem from '../components/projectItem';
+
+
+
+const projects = [
+  {
+    title: "Website Stichting Prinsmax",
+    description: "Vanuit stichting Prinsmax hebben wij als groep van 3 scholieren de opdracht gekregen om een website te maken voor Stichting Prins Max.",
+    image: StichtingPrinsMax,
+    link: "https://stichtingprinsmax.nl/"
+  },
+  {
+    title: "Game API",
+    description: "Ik heb een API gemaakt voor de arcade machine die we hebben gebouwd als onderdeel van een schoolopdracht. Met behulp van deze API kun je games, scores en gebruikers toevoegen, bijwerken en ophalen uit de database.",
+    image: GameApi,
+    link: "https://github.com/The-Monkey-Maffia/arcade-api"
+  },
+  {
+    title: "Website Vitrix",
+    description: "Vanuit het Beatrixziekenhuis hebben wij als groep van 5 scholieren de opdracht gekregen om iets te maken zodat de kinderen minder stress ervaren. Mijn taak was om de website te maken en anderen te helpen toen ik daarmee klaar was.",
+    image: Vitrix,
+    link: "https://github.com/Project-IoT-Runner/website"
+  },
+  {
+    title: "Website Drogeham",
+    description: "Vanuit Plaatselijk Belang Drogeham hebben wij als groep van 3 scholieren de opdracht gekregen om een website te maken voor Plaatselijk Belang Drogeham.",
+    image: Drogeham,
+    link: "https://drogeham.com/home"
+  },
+  {
+    title: "Bungalowpark Zee en Duin",
+    description: "Als een groep van 2 hebben we een website gemaakt voor een schoolopdracht. Ik heb de backend gedaan.",
+    image: Bungalowpark,
+    link: "https://github.com/BramRodenboog/Bungalowpark-Zee-en-Duin"
+  }
+];
+
+---
+
+<InfoLayout>
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+          <H1> Projects </H1>
+
+          <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
+               {projects.map(project => (
+                    <ProjectItem client:load project={project} />
+               ))}
+          </ul>
+     </div>
+</InfoLayout>

@@ -1,0 +1,39 @@
+---
+import ExternalLink from "../components/external-link.astro";
+import GithubContributions from "../components/GithubContributions";
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+---
+
+<InfoLayout>
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-32">
+          <div class="space-y-4 sm:space-y-12">
+               <H1> WHOAMI</H1>
+               <img src="https://avatars.githubusercontent.com/BramRodenboog" class="rounded-full" alt="Gideon Tigelaar" width="200" height="100">
+               <div class="flex">
+                    <ExternalLink href="https://github.com/BramRodenboog">GitHub</ExternalLink>
+                    <ExternalLink href="https://www.linkedin.com/in/bram-rodenboog-6b4b4224b/">Linkedin</ExternalLink>
+               </div>
+               
+               <p class="text-xl xl:text-2xl text-zinc-500 text-balance">
+                    Ik ben Bram, een enthousiaste, gemotiveerde en leergierige programmeur die graag programmeert. Mijn interesses liggen bij systeemprogrammeren. Zo ben ik momenteel bezig met het onderzoeken van RISC-V, Ethereum (EVM) en operating/distributed systems in mijn vrije tijd.
+               </p>
+               <GithubContributions username={"BramRodenboog"} tooltipEnabled={true}  client:load transition:animate="none" /> 
+          </div>
+
+
+          <div class="space-y-2 text-base sm:text-lg">
+               <h2 class="px-4 text-zinc-400 underline-offset-4 decoration-zinc-500">Skills:</h2>
+
+               <ul class="px-4 text-zinc-400 list-disc list-outside">
+                    <li>Linux</li>
+                    <li>JavaScript/ TypeScript</li>
+                    <li>React/ svelte</li>
+                    <li>Python/ Flask</li>
+                    <li>SQL/ SQL Server</li>
+                    <li>PHP/ Laravel</li>
+                    <li>C, RISC-V-ASM</li>
+               </ul>
+          </div>
+     </div>
+</InfoLayout>
