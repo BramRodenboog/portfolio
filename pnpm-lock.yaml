@@ -22,7 +22,7 @@ importers:
         version: 0.0.29
       '@tailwindcss/vite':
         specifier: ^4.1.4
-        version: 4.1.4(vite@6.3.2(@types/node@24.2.1)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.8.1))
+        version: 4.1.4(vite@6.3.5(@types/node@24.2.1)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.8.1))
       '@types/react':
         specifier: ^19.1.2
         version: 19.1.2
@@ -35,12 +35,21 @@ importers:
       astro-loading-indicator:
         specifier: ^0.7.0
         version: 0.7.0(astro@5.7.5(@netlify/blobs@10.0.8)(@types/node@24.2.1)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.40.0)(typescript@5.8.3)(yaml@2.8.1))
+      class-variance-authority:
+        specifier: ^0.7.1
+        version: 0.7.1
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      lucide-react:
+        specifier: ^0.543.0
+        version: 0.543.0(react@19.1.0)
       motion:
         specifier: ^12.9.2
         version: 12.9.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      ogl:
+        specifier: ^1.0.11
+        version: 1.0.11
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -60,6 +69,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.1.4)
+      tw-animate-css:
+        specifier: ^1.3.8
+        version: 1.3.8
 
 packages:
 
@@ -1730,6 +1742,9 @@ packages:
   citty@0.1.6:
     resolution: {integrity: sha512-tskPPKEs8D2KPafUypv2gxwJP8h/OaJmC82QQGGDQcHvXX43xF2VDACcJVmZ0EuSxkpO9Kc4MlrA3q0+FG58AQ==}
 
+  class-variance-authority@0.7.1:
+    resolution: {integrity: sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==}
+
   cli-boxes@3.0.0:
     resolution: {integrity: sha512-/lzGpEWL/8PfI0BmBOPRwp0c/wFNX1RdUML3jK/RcSBA9T8mZDdQpqYBKtCFTOfQbwPqWEOpjqW+Fnayc0969g==}
     engines: {node: '>=10'}
@@ -2714,6 +2729,11 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
+  lucide-react@0.543.0:
+    resolution: {integrity: sha512-fpVfuOQO0V3HBaOA1stIiP/A2fPCXHIleRZL16Mx3HmjTYwNSbimhnFBygs2CAfU1geexMX5ItUcWBGUaqw5CA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
   luxon@3.7.1:
     resolution: {integrity: sha512-RkRWjA926cTvz5rAb1BqyWkKbbjzCGchDUIKMCUvNi17j6f6j8uHGDV82Aqcqtzd+icoYpELmG3ksgGiFNNcNg==}
     engines: {node: '>=12'}
@@ -3047,6 +3067,9 @@ packages:
 
   ofetch@1.4.1:
     resolution: {integrity: sha512-QZj2DfGplQAr2oj9KzceK9Hwz6Whxazmn85yYeVuS3u9XTMOGMRx0kO95MQ+vLsj/S/NwBDMMLU5hpxvI6Tklw==}
+
+  ogl@1.0.11:
+    resolution: {integrity: sha512-kUpC154AFfxi16pmZUK4jk3J+8zxwTWGPo03EoYA8QPbzikHoaC82n6pNTbd+oEaJonaE8aPWBlX7ad9zrqLsA==}
 
   ohash@2.0.11:
     resolution: {integrity: sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==}
@@ -3623,6 +3646,9 @@ packages:
 
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+
+  tw-animate-css@1.3.8:
+    resolution: {integrity: sha512-Qrk3PZ7l7wUcGYhwZloqfkWCmaXZAoqjkdbIDvzfGshwGtexa/DAs9koXxIkrpEasyevandomzCBAV1Yyop5rw==}
 
   type-fest@4.40.0:
     resolution: {integrity: sha512-ABHZ2/tS2JkvH1PEjxFDTUWC8dB5OsIGZP4IFLhR293GqT5Y5qB1WwL2kMPYhQW9DVgVD8Hd7I8gjwPIf5GFkw==}
@@ -5368,12 +5394,12 @@ snapshots:
       postcss-selector-parser: 6.0.10
       tailwindcss: 4.1.4
 
-  '@tailwindcss/vite@4.1.4(vite@6.3.2(@types/node@24.2.1)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.8.1))':
+  '@tailwindcss/vite@4.1.4(vite@6.3.5(@types/node@24.2.1)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.8.1))':
     dependencies:
       '@tailwindcss/node': 4.1.4
       '@tailwindcss/oxide': 4.1.4
       tailwindcss: 4.1.4
-      vite: 6.3.2(@types/node@24.2.1)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.8.1)
+      vite: 6.3.5(@types/node@24.2.1)(jiti@2.4.2)(lightningcss@1.29.2)(yaml@2.8.1)
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -5887,6 +5913,10 @@ snapshots:
   citty@0.1.6:
     dependencies:
       consola: 3.4.2
+
+  class-variance-authority@0.7.1:
+    dependencies:
+      clsx: 2.1.1
 
   cli-boxes@3.0.0: {}
 
@@ -6921,6 +6951,10 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
+  lucide-react@0.543.0(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+
   luxon@3.7.1: {}
 
   magic-string@0.30.17:
@@ -7398,6 +7432,8 @@ snapshots:
       destr: 2.0.5
       node-fetch-native: 1.6.6
       ufo: 1.6.1
+
+  ogl@1.0.11: {}
 
   ohash@2.0.11: {}
 
@@ -8124,6 +8160,8 @@ snapshots:
       typescript: 5.8.3
 
   tslib@2.8.1: {}
+
+  tw-animate-css@1.3.8: {}
 
   type-fest@4.40.0: {}
 

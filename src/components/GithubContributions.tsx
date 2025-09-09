@@ -159,9 +159,9 @@ export default function GithubContributions({ username, tooltipEnabled }: Props)
                     className={cn(
                       'size-2 relative transition-colors duration-500 hover:scale-125 hover:transition-none',
                       count === 0
-                        ? 'bg-zinc-200/70 dark:bg-zinc-800'
+                        ? 'bg-zinc-800'
                         : count < 5
-                          ? 'bg-zinc-400/70 dark:bg-emerald-700'
+                          ? 'bg-emerald-700'
                           : count < 10
                             ? 'bg-emerald-400'
                             : 'bg-zinc-900 dark:bg-zinc-50'

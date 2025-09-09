@@ -5,14 +5,29 @@ import Navigation from "../components/navigation";
 import RootLayout from "../layouts/RootLayout.astro";
 import WarpBackground from "../components/warp-background";
 import AvailableForWork from "../components/available.astro";
+import Galaxy from "../components/Galaxy";
 ---
 
 <RootLayout>
 	<main>
 		<div class="flex flex-col justify-between h-full min-h-screen">
-			<H1 size="default" className="mx-8 my-8"> Bram <br /> Rodenboog </H1>
+			<div
+				style={{ width: "100%", height: "100%", position: "absolute" }}
+			>
+				<Galaxy client:only
+					mouseRepulsion={false}
+					mouseInteraction={false}
+					density={1}
+					glowIntensity={0.5}
+					saturation={0.2}
+					hueShift={180}
+				/>
+			</div>
+			<H1 size="default" className="mx-8 my-8 z-40">
+				Bram <br /> Rodenboog
+			</H1>
 			<!-- <AvailableForWork className="py-4" /> -->
-			<div class="mx-8 my-8 flex items-center justify-between">
+			<div class="mx-8 my-8 flex items-center justify-between z-40">
 				<div class="flex items-center gap-4">
 					<!-- <Link href="#">Book a call</Link> -->
 					<Link href="/projects" variant="secondary"
@@ -25,6 +40,5 @@ import AvailableForWork from "../components/available.astro";
 				</Navigation>
 			</div>
 		</div>
-		
 	</main>
 </RootLayout>
